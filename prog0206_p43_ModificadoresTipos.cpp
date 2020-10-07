@@ -13,7 +13,7 @@ int main(){
 
 short int idade; //ou short idade, para garantirmos que idade use apenas 2 bytes de memória;
 int montante;
-long int n_conta;//ou long n_conta, para garatirmos que n_conta use 4 bytes de memória.
+long int n_conta;//ou long n_conta, para garantirmos que n_conta use 4 bytes de memória.
 
 printf("Qual sua idade: "); scanf("%hd",&idade);
 printf("Qual o montante a depositar: "); scanf("%d", &montante);
