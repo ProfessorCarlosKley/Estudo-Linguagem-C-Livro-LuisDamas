@@ -9,14 +9,37 @@ virá a utilizar.
 (p. 133)*/
 
 #include <locale.h>
+
+void inic1(int s[10]){
+	int i;
+	for(i=0;i<10;i++)
+		s[i]=0;
+}
+
+void inic2(int s[20]){
+	int i;
+	for (i=0; i<20;i++)
+		s[i]=0;
 }
 
 int main(){
 		setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
 	//LC_ALL diz que é para aplicar essa configuração a tudo, não só a string.
+	int v[10]; //Vetor com 10 inteiros.
+	int w[20]; //Vetor com 20 inteiros.
+	int x;
+		
+	inic1(v); //inicia o vetor com todos elementos 0;
+	inic2(w); //inicia o vetor com todos elementos 0;
 
-	   	   
-	   	
+	
+	for(x=0;x<20;x++){
+		   w[x]=(x*3);
+	   }
+	   
+    for(x=0;x<20;x++){
+		   printf("Vetor %d = %d\n",x, w[x]);
+	   }
 	return 0;
 	system("PAUSE");
 }

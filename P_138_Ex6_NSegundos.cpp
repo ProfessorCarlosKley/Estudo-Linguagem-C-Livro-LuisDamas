@@ -9,14 +9,27 @@ virá a utilizar.
 (p. 133)*/
 
 #include <locale.h>
-}
+
 
 int main(){
-		setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
+	setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
 	//LC_ALL diz que é para aplicar essa configuração a tudo, não só a string.
-
-	   	   
-	   	
+	
+	int horas, minutos, segundos, t1=0, t2=0,total=0;
+	
+	printf("Insira a hora: ");
+	scanf("%i", &horas);
+	printf("Digite os minutos: ");
+	scanf("%i", &minutos);
+	printf("Digite os segundos: ");
+	scanf("%i", &segundos);
+	
+	t1 = horas * 3600;
+	t2 = minutos * 60;
+	total = t1 + t2 + segundos;
+	
+	printf("Total de segundos: %d", total);
+	
 	return 0;
 	system("PAUSE");
 }

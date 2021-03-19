@@ -9,14 +9,43 @@ virá a utilizar.
 (p. 133)*/
 
 #include <locale.h>
-}
+
+int segundos(int h, char t);
 
 int main(){
-		setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
-	//LC_ALL diz que é para aplicar essa configuração a tudo, não só a string.
-
-	   	   
-	   	
+	int hr;
+	char tipo;
+	int totalsegundos;
+	printf("Informe a hora: ");
+	scanf(" %d", &hr);
+	printf("Informe h, m ou s, para a conversão: ");
+	scanf(" %c", &tipo);
+	
+	totalsegundos = segundos(hr, tipo);
+	
+	printf("%d, h tem: %d %c.", hr, totalsegundos, tipo);
+	
+	
 	return 0;
 	system("PAUSE");
+}
+
+int segundos(int h, char t){
+	int result;
+	   if(t = 'h'){
+		   result = h;
+	   }	
+	   
+	   if (t='m'){
+ 	   int min;
+ 	    min = h * 60;
+	   result = min;
+	   }
+	   	   	 
+	   if (t='s'){
+		   int seg;
+		   seg = h * 3600;
+		   result = seg;
+	   }
+	   return result;
 }

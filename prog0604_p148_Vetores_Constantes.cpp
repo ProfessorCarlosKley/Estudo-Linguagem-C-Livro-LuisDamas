@@ -9,14 +9,28 @@ virá a utilizar.
 (p. 133)*/
 
 #include <locale.h>
+void inic(int s[]){
+	int i;
+	for(i=0;i<10;i++)
+		s[i]=0;
+
 }
 
 int main(){
 		setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
 	//LC_ALL diz que é para aplicar essa configuração a tudo, não só a string.
 
-	   	   
+	   int v[10], i;
+		  	   
+	   inic(v);
 	   	
+	   for(i=0;i<10;i++){
+		   v[i]=i;
+	   }
+	   	
+	   for(i=10-1; i>0; i--){
+		   printf("%d\n", v[i]);
+	   }	
 	return 0;
 	system("PAUSE");
 }
