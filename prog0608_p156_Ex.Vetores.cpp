@@ -9,13 +9,18 @@ virá a utilizar.
 (p. 133)*/
 
 #include <locale.h>
-
+const int n = 10;
 
 int main(){
-		setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
+	setlocale(LC_ALL, "Portuguese"); //Configuração para acentuação.
 	//LC_ALL diz que é para aplicar essa configuração a tudo, não só a string.
-
-	   	   
+	float v[n];
+	int i;
+	for (i=0; i<n; i++)
+		v[i] = i*(n-1); /*Sempre multiplicará o valor de i por 9/
+	
+	for (i=0; i<n; i++)
+		printf("%f\n", v[i]);	
 	   	
 	return 0;
 	system("PAUSE");
